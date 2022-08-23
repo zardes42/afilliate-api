@@ -3,7 +3,9 @@ const router = express.Router();
 const Controllerapp = require('../controller/index')
 
 let {getNewCode,createNewAfilliate,getAllAfilliates,getAllOrdersFromApi,getDashboard}  = Controllerapp ;
-
+router.get('/',(req, res) => {
+    res.send('HELLO WORKING')
+})
 // SENDS NEW CODE FOR REGISTERING USER
 router.get("/new_code",getNewCode);
 
